@@ -37,7 +37,7 @@ const SetPassword = () => {
         text: "Contraseña actualizada. Redirigiendo...",
         confirmButtonText: "OK",
       })
-      setTimeout(() => navigate("/estadoCuenta/login"), 2000)
+      setTimeout(() => navigate("/login"), 2000)
     } catch (err) {
       setIsLoading(false)
       Swal.fire({
