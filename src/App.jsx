@@ -63,9 +63,7 @@ function App() {
           <Route 
             path="/set-password" 
             element={
-              <PrivateRoute>
                 <SetPassword/>
-              </PrivateRoute>
             } 
           />
 
