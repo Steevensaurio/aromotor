@@ -28,7 +28,7 @@ const Login = () => {
                 confirmButtonText: 'OK',
             });
         } else {
-            navigate("/estadoCuenta/home");
+            navigate("/");
             setIsLoading(false);
         }
     }

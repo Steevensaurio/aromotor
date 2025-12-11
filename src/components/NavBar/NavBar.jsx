@@ -64,7 +64,7 @@ const NavBar = () =>{
                 <div className="flex items-center gap-4">
                     <button className="w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-lg flex items-center justify-center transition-colors duration-200"
                         onClick={() => {
-                            navigate("/estadoCuenta/home");
+                            navigate("/");
                         }}
                     >
                         <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -101,7 +101,7 @@ const NavBar = () =>{
                                     className="block w-full text-left px-4 py-2 text-sm text-red-600 hover:bg-red-50 hover:text-red-700 rounded-md transition-colors duration-200 flex items-center gap-2 font-medium border border-gray-100"
                                     onClick={() => {
                                         logout();
-                                        navigate("/estadoCuenta/login");
+                                        navigate("/login");
                                         setIsDropdownOpen(false);
                                     }}
                                     >

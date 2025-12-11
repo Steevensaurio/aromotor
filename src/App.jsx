@@ -5,6 +5,7 @@ import EstadoCuenta from './pages/EstadoCuenta'
 import MainWrapper from './layouts/MainWrapper'
 import PrivateRoute from './layouts/PrivateRoute'
 import Login from './pages/Login'
+import Dashboard from './pages/Dashboard'
 
 function App() {
 
@@ -16,9 +17,7 @@ function App() {
             path="/"
             element={
               <PrivateRoute>
-                <SearchProvider>
-                  <EstadoCuenta />
-                </SearchProvider>
+                  <Dashboard />
               </PrivateRoute>
             }
           />
