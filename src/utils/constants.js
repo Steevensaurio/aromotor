@@ -1,0 +1,1 @@
+export const API_BASE_URL = "https://estadocuenta-2f2j.onrender.com/api/"
