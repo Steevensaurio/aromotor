@@ -11,9 +11,9 @@ import NavBar from '../components/NavBar/NavBar'
 
 const EstadoCuenta = () => {
 
-//   const userData = jwtDecode(Cookie.get("access_token"))
-//   const perfil = userData?.perfil;
-//   const fullName = userData?.full_name
+const userData = jwtDecode(Cookie.get("access_token"))
+const perfil = userData?.perfil;
+const fullName = userData?.full_name
 
   const apiUrl = import.meta.env.VITE_API_URL;
   const {setIsLoading, clientes, setClientes} = useSearch()
