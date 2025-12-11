@@ -1,12 +1,12 @@
 import axios from 'axios'
 import {useEffect} from 'react'
-import NavBar from '../components/NavBar/NavBar'
 import Table from '../components/Table/Table'
 import Footer from '../components/Footer/Footer'
 import SearchBar from '../components/SearchBar/SearchBar'
 import { useSearch } from '../hooks/useSearch'
 import Cookie from 'js-cookie'; 
 import {jwtDecode} from 'jwt-decode' 
+import NavBar from '../components/NavBar/NavBar'
 
 
 const EstadoCuenta = () => {
