@@ -62,7 +62,7 @@ const modules = [
     bgColor: "from-blue-50 to-indigo-100",
     textColor: "text-blue-600",
     hoverTextColor: "group-hover:text-blue-700",
-    path: "/estadoCuenta/usuarios",
+    path: "/usuarios",
     permission: "can_view_usuarios",
   },
 ]

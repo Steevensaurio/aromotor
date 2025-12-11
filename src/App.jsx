@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { SearchProvider } from './context/SearchContext'
 import EstadoCuenta from './pages/EstadoCuenta'
@@ -6,6 +5,11 @@ import MainWrapper from './layouts/MainWrapper'
 import PrivateRoute from './layouts/PrivateRoute'
 import Login from './pages/Login'
 import Dashboard from './pages/Dashboard'
+import NotFound from './pages/NotFound'
+import Usuarios from './pages/Usuarios'
+import SetPassword from './pages/SetPassword'
+import EditarUsuario from './pages/EditarUsuario'
+import CrearUsuario from './pages/CrearUsuario'
 
 function App() {
 
@@ -21,14 +25,68 @@ function App() {
               </PrivateRoute>
             }
           />
-          <Route path="/login" element={<Login/>} />
+
+          <Route 
+            path="/login" 
+            element={
+              <Login/>
+            }
+          />
+
           <Route 
             path="/estadoCuenta" 
             element={
-              <SearchProvider>
-                <EstadoCuenta/>
-              </SearchProvider>
-            } />
+              <PrivateRoute>
+                <SearchProvider>
+                  <EstadoCuenta/>
+                </SearchProvider>
+              </PrivateRoute>  
+            } 
+          />
+
+          <Route 
+            path="*" 
+            element={
+              <NotFound/>
+            }
+          />
+
+          <Route 
+            path="/usuarios" 
+            element={
+              <PrivateRoute>
+                <Usuarios/>
+              </PrivateRoute>
+            } 
+          />
+
+          <Route 
+            path="/set-password" 
+            element={
+              <PrivateRoute>
+                <SetPassword/>
+              </PrivateRoute>
+            } 
+          />
+
+          <Route 
+            path="/usuarios/editar/:id" 
+            element={
+              <PrivateRoute>
+                <EditarUsuario />
+              </PrivateRoute>
+            }
+          />
+
+          <Route 
+            path="/usuarios/crear"  
+            element={
+              <PrivateRoute>
+                <CrearUsuario />
+              </PrivateRoute>
+            } 
+          />
+
         </Routes>
       </MainWrapper>
     </BrowserRouter>
